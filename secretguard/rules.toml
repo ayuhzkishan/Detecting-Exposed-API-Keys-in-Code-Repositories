@@ -1,0 +1,7 @@
+# Secret detection rules (Gitleaks-style)
+
+[[rules]]
+id = "generic-api-key"
+description = "Generic API Key"
+regex = '''(?i)(api_key|apikey|secret|password|token)[-|_]?\s*[:=]\s*['"]?([a-zA-Z0-9_\-]{16,})['"]?'''
+keywords = ["api_key", "apikey", "secret"]

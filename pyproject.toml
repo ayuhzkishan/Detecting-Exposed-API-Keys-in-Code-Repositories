@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "secretguard"
+version = "0.1.0"
+authors = [
+  { name="Ayush", email="ayush@example.com" },
+]
+description = "A tool for detecting exposed API keys in code repositories"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "toml",
+]
+
+[project.scripts]
+secretguard = "secretguard.cli:main"
