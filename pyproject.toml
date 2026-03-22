@@ -1,19 +1,20 @@
 [build-system]
-requires = ["setuptools>=61.0"]
-build-backend = "setuptools.build_meta"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 [project]
 name = "secretguard"
 version = "0.1.0"
-authors = [
-  { name="Ayush", email="ayush@example.com" },
-]
-description = "A tool for detecting exposed API keys in code repositories"
-readme = "README.md"
-requires-python = ">=3.8"
+description = "DevSecOps Secret Scanner - Blocks commits with exposed secrets"
+requires-python = ">=3.10"
 dependencies = [
-    "toml",
+    "typer[all]>=0.12.0",
+    "rich>=13.0",
+    "tomli>=2.0.0",
+    "GitPython>=3.1.0",           # for git scanning later
+    "pyyaml>=6.0"
 ]
 
 [project.scripts]
-secretguard = "secretguard.cli:main"
+secretguard = "secretguard.cli:app"
+secretguard-hook = "secretguard.cli:app"

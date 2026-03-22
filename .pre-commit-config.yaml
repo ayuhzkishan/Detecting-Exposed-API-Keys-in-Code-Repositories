@@ -1,16 +1,26 @@
 repos:
--   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.4.0
+  # ── Standard hygiene hooks ────────────────────────────────────────────────
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
     hooks:
-    -   id: trailing-whitespace
-    -   id: end-of-file-fixer
-    -   id: check-yaml
-    -   id: check-added-large-files
--   repo: local
+      - id: trailing-whitespace      # remove trailing spaces
+      - id: end-of-file-fixer        # ensure files end with a newline
+      - id: check-yaml               # validate YAML syntax
+      - id: check-toml               # validate TOML syntax
+      - id: check-added-large-files  # warn on large binary blobs
+        args: ["--maxkb=500"]
+      - id: debug-statements         # catch leftover breakpoint() / pdb calls
+      - id: check-merge-conflict     # block files with unresolved merge markers
+
+  # ── SecretGuard — local hook (this project) ───────────────────────────────
+  - repo: local
     hooks:
-    -   id: secretguard
-        name: SecretGuard
-        entry: python -m secretguard.cli
+      - id: secretguard
+        name: SecretGuard — scan for exposed secrets
+        # `hook` sub-command; pre-commit passes staged filenames as positional args
+        entry: secretguard hook
         language: python
-        types: [text]
-        stages: [commit]
+        types: [text]          # only runs on text files
+        pass_filenames: true   # pre-commit appends staged filenames → secretguard hook <file1> <file2> ...
+        stages: [pre-commit]   # runs on `git commit` (use pre-push for push stage)
+        verbose: true          # show output even when the hook passes
