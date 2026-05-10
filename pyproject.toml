@@ -11,8 +11,11 @@ dependencies = [
     "typer[all]>=0.12.0",
     "rich>=13.0",
     "tomli>=2.0.0",
-    "GitPython>=3.1.0",           # for git scanning later
-    "pyyaml>=6.0"
+    "GitPython>=3.1.0",
+    "pyyaml>=6.0",
+    "sentence-transformers>=2.2.0",
+    "scikit-learn>=1.3.0",
+    "numpy>=1.24.0",
 ]
 
 [project.scripts]

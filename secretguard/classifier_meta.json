@@ -1,0 +1,18 @@
+{
+  "embedding_model": "all-MiniLM-L6-v2",
+  "classifier": "LogisticRegression",
+  "trained_at": "2026-04-20T05:21:17.634633Z",
+  "n_positive": 43,
+  "n_negative": 39,
+  "n_total": 82,
+  "embedding_dim": 384,
+  "cv_f1_mean": 0.9055555555555556,
+  "cv_f1_std": 0.11600340565456166,
+  "cv_accuracy": 0.9029411764705882,
+  "cv_precision": 0.9269841269841269,
+  "cv_recall": 0.888888888888889,
+  "labels": {
+    "0": "false_positive",
+    "1": "real_secret"
+  }
+}

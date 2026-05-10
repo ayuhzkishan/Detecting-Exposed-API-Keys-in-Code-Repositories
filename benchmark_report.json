@@ -1,0 +1,1662 @@
+{
+  "generated_at": "2026-04-30T12:25:12.167591",
+  "test_set_size": 75,
+  "threshold": 0.3,
+  "classifier_mode": "trained",
+  "ablation": {
+    "L1 only  (Regex)": {
+      "label": "L1 only  (Regex)",
+      "precision": 0.473,
+      "recall": 0.867,
+      "f1": 0.612,
+      "fpr": 0.644,
+      "tp": 26,
+      "fp": 29,
+      "fn": 4,
+      "tn": 16,
+      "latency_ms": 0.04,
+      "category_stats": {
+        "A": {
+          "tp": 18,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "B": {
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "C": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 4,
+          "tn": 0
+        },
+        "D1": {
+          "tp": 0,
+          "fp": 5,
+          "fn": 0,
+          "tn": 0
+        },
+        "D2": {
+          "tp": 0,
+          "fp": 4,
+          "fn": 0,
+          "tn": 0
+        },
+        "D3": {
+          "tp": 0,
+          "fp": 3,
+          "fn": 0,
+          "tn": 0
+        },
+        "D4": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 0,
+          "tn": 0
+        },
+        "D5": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 0,
+          "tn": 1
+        },
+        "D6": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "tn": 3
+        },
+        "D7": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 2
+        },
+        "D8": {
+          "tp": 0,
+          "fp": 3,
+          "fn": 0,
+          "tn": 0
+        },
+        "D9": {
+          "tp": 0,
+          "fp": 6,
+          "fn": 0,
+          "tn": 0
+        },
+        "E1": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "tn": 1
+        },
+        "E2": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "tn": 1
+        },
+        "E3": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 2
+        },
+        "E4": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 1
+        },
+        "E5": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "tn": 2
+        },
+        "E6": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 1
+        },
+        "E7": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 2
+        }
+      }
+    },
+    "L1+L2   (+ Entropy)": {
+      "label": "L1+L2   (+ Entropy)",
+      "precision": 0.473,
+      "recall": 0.867,
+      "f1": 0.612,
+      "fpr": 0.644,
+      "tp": 26,
+      "fp": 29,
+      "fn": 4,
+      "tn": 16,
+      "latency_ms": 0.05,
+      "category_stats": {
+        "A": {
+          "tp": 18,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "B": {
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "C": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 4,
+          "tn": 0
+        },
+        "D1": {
+          "tp": 0,
+          "fp": 5,
+          "fn": 0,
+          "tn": 0
+        },
+        "D2": {
+          "tp": 0,
+          "fp": 4,
+          "fn": 0,
+          "tn": 0
+        },
+        "D3": {
+          "tp": 0,
+          "fp": 3,
+          "fn": 0,
+          "tn": 0
+        },
+        "D4": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 0,
+          "tn": 0
+        },
+        "D5": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 0,
+          "tn": 1
+        },
+        "D6": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "tn": 3
+        },
+        "D7": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 2
+        },
+        "D8": {
+          "tp": 0,
+          "fp": 3,
+          "fn": 0,
+          "tn": 0
+        },
+        "D9": {
+          "tp": 0,
+          "fp": 6,
+          "fn": 0,
+          "tn": 0
+        },
+        "E1": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "tn": 1
+        },
+        "E2": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "tn": 1
+        },
+        "E3": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 2
+        },
+        "E4": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 1
+        },
+        "E5": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "tn": 2
+        },
+        "E6": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 1
+        },
+        "E7": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 2
+        }
+      }
+    },
+    "L1+L3   (+ Classifier)": {
+      "label": "L1+L3   (+ Classifier)",
+      "precision": 0.473,
+      "recall": 0.867,
+      "f1": 0.612,
+      "fpr": 0.644,
+      "tp": 26,
+      "fp": 29,
+      "fn": 4,
+      "tn": 16,
+      "latency_ms": 9.08,
+      "category_stats": {
+        "A": {
+          "tp": 18,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "B": {
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "C": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 4,
+          "tn": 0
+        },
+        "D1": {
+          "tp": 0,
+          "fp": 5,
+          "fn": 0,
+          "tn": 0
+        },
+        "D2": {
+          "tp": 0,
+          "fp": 4,
+          "fn": 0,
+          "tn": 0
+        },
+        "D3": {
+          "tp": 0,
+          "fp": 3,
+          "fn": 0,
+          "tn": 0
+        },
+        "D4": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 0,
+          "tn": 0
+        },
+        "D5": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 0,
+          "tn": 1
+        },
+        "D6": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "tn": 3
+        },
+        "D7": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 2
+        },
+        "D8": {
+          "tp": 0,
+          "fp": 3,
+          "fn": 0,
+          "tn": 0
+        },
+        "D9": {
+          "tp": 0,
+          "fp": 6,
+          "fn": 0,
+          "tn": 0
+        },
+        "E1": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "tn": 1
+        },
+        "E2": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "tn": 1
+        },
+        "E3": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 2
+        },
+        "E4": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 1
+        },
+        "E5": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "tn": 2
+        },
+        "E6": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 1
+        },
+        "E7": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 2
+        }
+      }
+    },
+    "L1+L4   (+ FP Suppressor)": {
+      "label": "L1+L4   (+ FP Suppressor)",
+      "precision": 1.0,
+      "recall": 0.867,
+      "f1": 0.929,
+      "fpr": 0.0,
+      "tp": 26,
+      "fp": 0,
+      "fn": 4,
+      "tn": 45,
+      "latency_ms": 0.15,
+      "category_stats": {
+        "A": {
+          "tp": 18,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "B": {
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "C": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 4,
+          "tn": 0
+        },
+        "D1": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 5
+        },
+        "D2": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 4
+        },
+        "D3": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 3
+        },
+        "D4": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 2
+        },
+        "D5": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 3
+        },
+        "D6": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 4
+        },
+        "D7": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 2
+        },
+        "D8": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 3
+        },
+        "D9": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 6
+        },
+        "E1": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 2
+        },
+        "E2": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 2
+        },
+        "E3": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 2
+        },
+        "E4": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 1
+        },
+        "E5": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 3
+        },
+        "E6": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 1
+        },
+        "E7": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 2
+        }
+      }
+    },
+    "L1+L2+L4 (Stats+Suppress)": {
+      "label": "L1+L2+L4 (Stats+Suppress)",
+      "precision": 1.0,
+      "recall": 0.867,
+      "f1": 0.929,
+      "fpr": 0.0,
+      "tp": 26,
+      "fp": 0,
+      "fn": 4,
+      "tn": 45,
+      "latency_ms": 0.13,
+      "category_stats": {
+        "A": {
+          "tp": 18,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "B": {
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "C": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 4,
+          "tn": 0
+        },
+        "D1": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 5
+        },
+        "D2": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 4
+        },
+        "D3": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 3
+        },
+        "D4": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 2
+        },
+        "D5": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 3
+        },
+        "D6": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 4
+        },
+        "D7": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 2
+        },
+        "D8": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 3
+        },
+        "D9": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 6
+        },
+        "E1": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 2
+        },
+        "E2": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 2
+        },
+        "E3": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 2
+        },
+        "E4": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 1
+        },
+        "E5": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 3
+        },
+        "E6": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 1
+        },
+        "E7": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 2
+        }
+      }
+    },
+    "L1+L3+L4 (NLP+Suppress)": {
+      "label": "L1+L3+L4 (NLP+Suppress)",
+      "precision": 1.0,
+      "recall": 0.867,
+      "f1": 0.929,
+      "fpr": 0.0,
+      "tp": 26,
+      "fp": 0,
+      "fn": 4,
+      "tn": 45,
+      "latency_ms": 6.4,
+      "category_stats": {
+        "A": {
+          "tp": 18,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "B": {
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "C": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 4,
+          "tn": 0
+        },
+        "D1": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 5
+        },
+        "D2": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 4
+        },
+        "D3": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 3
+        },
+        "D4": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 2
+        },
+        "D5": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 3
+        },
+        "D6": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 4
+        },
+        "D7": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 2
+        },
+        "D8": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 3
+        },
+        "D9": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 6
+        },
+        "E1": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 2
+        },
+        "E2": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 2
+        },
+        "E3": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 2
+        },
+        "E4": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 1
+        },
+        "E5": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 3
+        },
+        "E6": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 1
+        },
+        "E7": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 2
+        }
+      }
+    },
+    "TriFusion Full (L1+L2+L3+L4)": {
+      "label": "TriFusion Full (L1+L2+L3+L4)",
+      "precision": 1.0,
+      "recall": 0.867,
+      "f1": 0.929,
+      "fpr": 0.0,
+      "tp": 26,
+      "fp": 0,
+      "fn": 4,
+      "tn": 45,
+      "latency_ms": 6.65,
+      "category_stats": {
+        "A": {
+          "tp": 18,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "B": {
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "C": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 4,
+          "tn": 0
+        },
+        "D1": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 5
+        },
+        "D2": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 4
+        },
+        "D3": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 3
+        },
+        "D4": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 2
+        },
+        "D5": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 3
+        },
+        "D6": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 4
+        },
+        "D7": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 2
+        },
+        "D8": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 3
+        },
+        "D9": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 6
+        },
+        "E1": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 2
+        },
+        "E2": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 2
+        },
+        "E3": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 2
+        },
+        "E4": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 1
+        },
+        "E5": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 3
+        },
+        "E6": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 1
+        },
+        "E7": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 2
+        }
+      }
+    }
+  },
+  "industry_baselines": {
+    "TruffleHog v3 [Basak2022]": {
+      "precision": 0.28,
+      "recall": 0.92,
+      "f1": 0.43
+    },
+    "Gitleaks v8  [Basak2022]": {
+      "precision": 0.35,
+      "recall": 0.88,
+      "f1": 0.5
+    },
+    "PassFinder   [Li2023]": {
+      "precision": 0.51,
+      "recall": 0.74,
+      "f1": 0.6
+    },
+    "SpotBugs     [Basak2022]": {
+      "precision": 0.67,
+      "recall": 0.41,
+      "f1": 0.51
+    }
+  },
+  "trifusion_full": {
+    "label": "TriFusion Full (L1+L2+L3+L4)",
+    "precision": 1.0,
+    "recall": 0.867,
+    "f1": 0.929,
+    "fpr": 0.0,
+    "tp": 26,
+    "fp": 0,
+    "fn": 4,
+    "tn": 45,
+    "latency_ms": 6.65,
+    "category_stats": {
+      "A": {
+        "tp": 18,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      },
+      "B": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      },
+      "C": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 4,
+        "tn": 0
+      },
+      "D1": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 5
+      },
+      "D2": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 4
+      },
+      "D3": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3
+      },
+      "D4": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 2
+      },
+      "D5": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3
+      },
+      "D6": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 4
+      },
+      "D7": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 2
+      },
+      "D8": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3
+      },
+      "D9": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 6
+      },
+      "E1": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 2
+      },
+      "E2": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 2
+      },
+      "E3": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 2
+      },
+      "E4": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1
+      },
+      "E5": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3
+      },
+      "E6": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1
+      },
+      "E7": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 2
+      }
+    }
+  },
+  "scenario_results": [
+    {
+      "desc": "AWS AKIA Access Key",
+      "category": "A",
+      "is_secret": true,
+      "detected": true,
+      "score": 0.605,
+      "correct": true
+    },
+    {
+      "desc": "AWS AKIA Access Key (variant)",
+      "category": "A",
+      "is_secret": true,
+      "detected": true,
+      "score": 0.605,
+      "correct": true
+    },
+    {
+      "desc": "Stripe Secret Key (sk_live_)",
+      "category": "A",
+      "is_secret": true,
+      "detected": true,
+      "score": 0.65,
+      "correct": true
+    },
+    {
+      "desc": "Stripe Restricted Key (rk_live_)",
+      "category": "A",
+      "is_secret": true,
+      "detected": true,
+      "score": 0.65,
+      "correct": true
+    },
+    {
+      "desc": "Google API Key (AIza)",
+      "category": "A",
+      "is_secret": true,
+      "detected": true,
+      "score": 0.65,
+      "correct": true
+    },
+    {
+      "desc": "Google OAuth Access Token (ya29.)",
+      "category": "A",
+      "is_secret": true,
+      "detected": true,
+      "score": 0.65,
+      "correct": true
+    },
+    {
+      "desc": "GitHub Fine-grained PAT (ghp_)",
+      "category": "A",
+      "is_secret": true,
+      "detected": true,
+      "score": 0.65,
+      "correct": true
+    },
+    {
+      "desc": "GitHub Server Token (ghs_)",
+      "category": "A",
+      "is_secret": true,
+      "detected": true,
+      "score": 0.65,
+      "correct": true
+    },
+    {
+      "desc": "Slack Bot Token (xoxb-)",
+      "category": "A",
+      "is_secret": true,
+      "detected": true,
+      "score": 0.642,
+      "correct": true
+    },
+    {
+      "desc": "Square Access Token (sq0atp-)",
+      "category": "A",
+      "is_secret": true,
+      "detected": true,
+      "score": 0.605,
+      "correct": true
+    },
+    {
+      "desc": "Square OAuth Secret (sq0csp-)",
+      "category": "A",
+      "is_secret": true,
+      "detected": true,
+      "score": 0.65,
+      "correct": true
+    },
+    {
+      "desc": "Facebook Access Token (EAACEd)",
+      "category": "A",
+      "is_secret": true,
+      "detected": true,
+      "score": 0.65,
+      "correct": true
+    },
+    {
+      "desc": "PayPal Braintree Token",
+      "category": "A",
+      "is_secret": true,
+      "detected": true,
+      "score": 0.65,
+      "correct": true
+    },
+    {
+      "desc": "Amazon MWS Auth Token",
+      "category": "A",
+      "is_secret": true,
+      "detected": true,
+      "score": 0.65,
+      "correct": true
+    },
+    {
+      "desc": "RSA Private Key Header",
+      "category": "A",
+      "is_secret": true,
+      "detected": true,
+      "score": 0.65,
+      "correct": true
+    },
+    {
+      "desc": "OpenSSH Private Key Header",
+      "category": "A",
+      "is_secret": true,
+      "detected": true,
+      "score": 0.65,
+      "correct": true
+    },
+    {
+      "desc": "EC Private Key Header",
+      "category": "A",
+      "is_secret": true,
+      "detected": true,
+      "score": 0.65,
+      "correct": true
+    },
+    {
+      "desc": "PGP Private Key Header",
+      "category": "A",
+      "is_secret": true,
+      "detected": true,
+      "score": 0.65,
+      "correct": true
+    },
+    {
+      "desc": "Real API key assignment",
+      "category": "B",
+      "is_secret": true,
+      "detected": true,
+      "score": 0.689,
+      "correct": true
+    },
+    {
+      "desc": "Real password assignment",
+      "category": "B",
+      "is_secret": true,
+      "detected": true,
+      "score": 0.712,
+      "correct": true
+    },
+    {
+      "desc": "JWT token assignment",
+      "category": "B",
+      "is_secret": true,
+      "detected": true,
+      "score": 0.684,
+      "correct": true
+    },
+    {
+      "desc": "AWS Secret Key value",
+      "category": "B",
+      "is_secret": true,
+      "detected": true,
+      "score": 0.678,
+      "correct": true
+    },
+    {
+      "desc": "Database password literal",
+      "category": "B",
+      "is_secret": true,
+      "detected": true,
+      "score": 0.657,
+      "correct": true
+    },
+    {
+      "desc": "OAuth client secret",
+      "category": "B",
+      "is_secret": true,
+      "detected": true,
+      "score": 0.662,
+      "correct": true
+    },
+    {
+      "desc": "Bearer auth token",
+      "category": "B",
+      "is_secret": true,
+      "detected": true,
+      "score": 0.877,
+      "correct": true
+    },
+    {
+      "desc": "RQ3: Obfuscated \u2014 var names destroyed, string literals intact",
+      "category": "C",
+      "is_secret": true,
+      "detected": false,
+      "score": 0.0,
+      "correct": false
+    },
+    {
+      "desc": "RQ3: Obfuscated AWS \u2014 vars renamed to x/y",
+      "category": "C",
+      "is_secret": true,
+      "detected": true,
+      "score": 0.946,
+      "correct": true
+    },
+    {
+      "desc": "RQ3: Obfuscated GitHub token",
+      "category": "C",
+      "is_secret": true,
+      "detected": false,
+      "score": 0.0,
+      "correct": false
+    },
+    {
+      "desc": "RQ3: Fully obfuscated Stripe \u2014 all vars renamed",
+      "category": "C",
+      "is_secret": true,
+      "detected": false,
+      "score": 0.0,
+      "correct": false
+    },
+    {
+      "desc": "RQ3: Obfuscated DB connection string (Cabasa gap)",
+      "category": "C",
+      "is_secret": true,
+      "detected": false,
+      "score": 0.0,
+      "correct": false
+    },
+    {
+      "desc": "[Saha\u00a72.2-D1] Function call: getPassword()",
+      "category": "D1",
+      "is_secret": false,
+      "detected": false,
+      "score": 0.0,
+      "correct": true
+    },
+    {
+      "desc": "[Saha\u00a72.2-D1] Function call: config.get()",
+      "category": "D1",
+      "is_secret": false,
+      "detected": false,
+      "score": 0.0,
+      "correct": true
+    },
+    {
+      "desc": "[Saha\u00a72.2-D1] Function call: headers.get()",
+      "category": "D1",
+      "is_secret": false,
+      "detected": false,
+      "score": 0.0,
+      "correct": true
+    },
+    {
+      "desc": "[Saha\u00a72.2-D1] Function call: vault.read_secret()",
+      "category": "D1",
+      "is_secret": false,
+      "detected": false,
+      "score": 0.0,
+      "correct": true
+    },
+    {
+      "desc": "[Saha\u00a72.2-D1] Function call: bcrypt.hashpw()",
+      "category": "D1",
+      "is_secret": false,
+      "detected": false,
+      "score": 0.0,
+      "correct": true
+    },
+    {
+      "desc": "[Saha\u00a72.2-D2] Variable assignment: ui.password",
+      "category": "D2",
+      "is_secret": false,
+      "detected": false,
+      "score": 0.0,
+      "correct": true
+    },
+    {
+      "desc": "[Saha\u00a72.2-D2] Variable assignment: self.config.api_key",
+      "category": "D2",
+      "is_secret": false,
+      "detected": false,
+      "score": 0.0,
+      "correct": true
+    },
+    {
+      "desc": "[Saha\u00a72.2-D2] Variable assignment: os.environ lookup",
+      "category": "D2",
+      "is_secret": false,
+      "detected": false,
+      "score": 0.0,
+      "correct": true
+    },
+    {
+      "desc": "[Saha\u00a72.2-D2] Variable assignment: settings.SECRET_KEY",
+      "category": "D2",
+      "is_secret": false,
+      "detected": false,
+      "score": 0.0,
+      "correct": true
+    },
+    {
+      "desc": "[Saha\u00a72.2-D3] Test directory: /tests/test_auth.py",
+      "category": "D3",
+      "is_secret": false,
+      "detected": false,
+      "score": 0.08,
+      "correct": true
+    },
+    {
+      "desc": "[Saha\u00a72.2-D3] Mock directory: /mocks/",
+      "category": "D3",
+      "is_secret": false,
+      "detected": false,
+      "score": 0.069,
+      "correct": true
+    },
+    {
+      "desc": "[Saha\u00a72.2-D3] Fixtures directory",
+      "category": "D3",
+      "is_secret": false,
+      "detected": false,
+      "score": 0.0,
+      "correct": true
+    },
+    {
+      "desc": "[Saha\u00a72.2-D4] README file with placeholder",
+      "category": "D4",
+      "is_secret": false,
+      "detected": false,
+      "score": 0.0,
+      "correct": true
+    },
+    {
+      "desc": "[Saha\u00a72.2-D4] Docs file",
+      "category": "D4",
+      "is_secret": false,
+      "detected": false,
+      "score": 0.0,
+      "correct": true
+    },
+    {
+      "desc": "[Saha\u00a72.2-D5] Numeric-only value",
+      "category": "D5",
+      "is_secret": false,
+      "detected": false,
+      "score": 0.0,
+      "correct": true
+    },
+    {
+      "desc": "[Saha\u00a72.2-D5] Numeric-only API key",
+      "category": "D5",
+      "is_secret": false,
+      "detected": false,
+      "score": 0.0,
+      "correct": true
+    },
+    {
+      "desc": "[Saha\u00a72.2-D5] Numeric literal (no quotes)",
+      "category": "D5",
+      "is_secret": false,
+      "detected": false,
+      "score": 0.0,
+      "correct": true
+    },
+    {
+      "desc": "[Saha\u00a72.2-D6] None assignment",
+      "category": "D6",
+      "is_secret": false,
+      "detected": false,
+      "score": 0.0,
+      "correct": true
+    },
+    {
+      "desc": "[Saha\u00a72.2-D6] Empty string assignment",
+      "category": "D6",
+      "is_secret": false,
+      "detected": false,
+      "score": 0.0,
+      "correct": true
+    },
+    {
+      "desc": "[Saha\u00a72.2-D6] Null assignment (JS/Java)",
+      "category": "D6",
+      "is_secret": false,
+      "detected": false,
+      "score": 0.0,
+      "correct": true
+    },
+    {
+      "desc": "[Saha\u00a72.2-D6] Undefined assignment (JS)",
+      "category": "D6",
+      "is_secret": false,
+      "detected": false,
+      "score": 0.0,
+      "correct": true
+    },
+    {
+      "desc": "[Saha\u00a72.2-D7] CSS selector",
+      "category": "D7",
+      "is_secret": false,
+      "detected": false,
+      "score": 0.0,
+      "correct": true
+    },
+    {
+      "desc": "[Saha\u00a72.2-D7] CSS ID selector",
+      "category": "D7",
+      "is_secret": false,
+      "detected": false,
+      "score": 0.0,
+      "correct": true
+    },
+    {
+      "desc": "[Saha\u00a72.2-D8] Commented-out Python",
+      "category": "D8",
+      "is_secret": false,
+      "detected": false,
+      "score": 0.0,
+      "correct": true
+    },
+    {
+      "desc": "[Saha\u00a72.2-D8] Commented-out JS/Java",
+      "category": "D8",
+      "is_secret": false,
+      "detected": false,
+      "score": 0.076,
+      "correct": true
+    },
+    {
+      "desc": "[Saha\u00a72.2-D8] Block comment",
+      "category": "D8",
+      "is_secret": false,
+      "detected": false,
+      "score": 0.0,
+      "correct": true
+    },
+    {
+      "desc": "[Saha\u00a72.2-D9] Placeholder: your-password-here",
+      "category": "D9",
+      "is_secret": false,
+      "detected": false,
+      "score": 0.0,
+      "correct": true
+    },
+    {
+      "desc": "[Saha\u00a72.2-D9] Placeholder: REPLACE_ME",
+      "category": "D9",
+      "is_secret": false,
+      "detected": false,
+      "score": 0.0,
+      "correct": true
+    },
+    {
+      "desc": "[Saha\u00a72.2-D9] Placeholder: XXXX (transition entropy catch)",
+      "category": "D9",
+      "is_secret": false,
+      "detected": false,
+      "score": 0.0,
+      "correct": true
+    },
+    {
+      "desc": "[Saha\u00a72.2-D9] Placeholder: changeme",
+      "category": "D9",
+      "is_secret": false,
+      "detected": false,
+      "score": 0.0,
+      "correct": true
+    },
+    {
+      "desc": "[Saha\u00a72.2-D9] Placeholder: todo",
+      "category": "D9",
+      "is_secret": false,
+      "detected": false,
+      "score": 0.0,
+      "correct": true
+    },
+    {
+      "desc": "[Saha\u00a72.2-D9] Placeholder: repeated chars (transition entropy)",
+      "category": "D9",
+      "is_secret": false,
+      "detected": false,
+      "score": 0.068,
+      "correct": true
+    },
+    {
+      "desc": "[Li2023-E1] os.getenv with fallback",
+      "category": "E1",
+      "is_secret": false,
+      "detected": false,
+      "score": 0.0,
+      "correct": true
+    },
+    {
+      "desc": "[Li2023-E1] Node.js process.env lookup",
+      "category": "E1",
+      "is_secret": false,
+      "detected": false,
+      "score": 0.0,
+      "correct": true
+    },
+    {
+      "desc": "[Cabasa-E2] Dev-only localhost password",
+      "category": "E2",
+      "is_secret": false,
+      "detected": false,
+      "score": 0.0,
+      "correct": true
+    },
+    {
+      "desc": "[Cabasa-E2] Django auto-generated insecure key (default)",
+      "category": "E2",
+      "is_secret": false,
+      "detected": false,
+      "score": 0.0,
+      "correct": true
+    },
+    {
+      "desc": "[Li2023-E3] SHA-256 hash (not a secret)",
+      "category": "E3",
+      "is_secret": false,
+      "detected": false,
+      "score": 0.0,
+      "correct": true
+    },
+    {
+      "desc": "[Li2023-E3] MD5 content hash",
+      "category": "E3",
+      "is_secret": false,
+      "detected": false,
+      "score": 0.0,
+      "correct": true
+    },
+    {
+      "desc": "[Li2023-E4] Base64 of 'Hello World!' (high entropy, not a secret)",
+      "category": "E4",
+      "is_secret": false,
+      "detected": false,
+      "score": 0.0,
+      "correct": true
+    },
+    {
+      "desc": "[Cabasa-E5] Weak password literal 'password' (known placeholder)",
+      "category": "E5",
+      "is_secret": false,
+      "detected": false,
+      "score": 0.0,
+      "correct": true
+    },
+    {
+      "desc": "[Cabasa-E5] Default 'admin' credential",
+      "category": "E5",
+      "is_secret": false,
+      "detected": false,
+      "score": 0.0,
+      "correct": true
+    },
+    {
+      "desc": "[Cabasa-E5] Default 'root' credential",
+      "category": "E5",
+      "is_secret": false,
+      "detected": false,
+      "score": 0.0,
+      "correct": true
+    },
+    {
+      "desc": "[Saha2022-E6] Twitter-pattern: not in auth context (Tier-3 FP)",
+      "category": "E6",
+      "is_secret": false,
+      "detected": false,
+      "score": 0.0,
+      "correct": true
+    },
+    {
+      "desc": "[Cabasa-E7] Log statement \u2014 not a credential assignment",
+      "category": "E7",
+      "is_secret": false,
+      "detected": false,
+      "score": 0.0,
+      "correct": true
+    },
+    {
+      "desc": "[Cabasa-E7] Debug log \u2014 not a credential assignment",
+      "category": "E7",
+      "is_secret": false,
+      "detected": false,
+      "score": 0.0,
+      "correct": true
+    }
+  ],
+  "citations": {
+    "Basak2022": "Basak et al. SecretBench. MSR 2022. https://doi.org/10.1145/3524842.3528473",
+    "Saha2022": "Saha et al. SecretsHunter. ASE 2022.",
+    "Li2023": "Li et al. PassFinder evaluation. ICSE 2023.",
+    "Cabasa2023": "Cabasa et al. Student repo secrets. SIGCSE 2023."
+  }
+}

@@ -47,14 +47,167 @@ severity = "critical"
 [[rules]]
 id = "generic-api-key"
 description = "Generic API key / token assignment"
-regex = '''(?i)(api[_-]?key|secret|token|password|pwd|api[_-]?secret|auth[_-]?token)\s*[:=]\s*["']?[a-zA-Z0-9\-_]{20,100}["']?'''
+regex = '''(?i)(api[_-]?key|secret|token|password|pwd|api[_-]?secret|auth[_-]?token)\s*[:=]\s*["']?[a-zA-Z0-9\-_@!#$%^&*.+/=]{8,100}["']?'''
 tags = ["generic", "api"]
 severity = "medium"
-min_length = 20
+min_length = 8
 
 [[rules]]
 id = "slack-token"
-description = "Slack Token (classic bot/user token)"
-regex = '''xox[baprs]-[0-9]{10,12}-[0-9]{10,12}-[0-9]{10,12}-[a-z0-9]{32}'''
+description = "Slack Token (bot/user/app)"
+# xoxb- xoxa- xoxp- xoxr- xoxs- followed by digits-digits-digits-hex32+
+regex = '''xox[baprs]-[0-9]{8,13}-[0-9]{8,13}-[0-9a-zA-Z]{8,}'''
 tags = ["slack", "token"]
+severity = "high"
+min_length = 30
+
+[[rules]]
+id = "auth-token-bearer"
+description = "Hardcoded Bearer / JWT token in assignment"
+regex = '''(?i)(auth[_\-]?token|bearer_token|access_token)\s*[=:]\s*["']?Bearer [A-Za-z0-9\-_.]+\.[A-Za-z0-9\-_.]+["']?'''
+tags = ["jwt", "bearer", "token"]
+severity = "high"
+min_length = 20
+
+# ── TABLE III: Platform API Credentials ──────────────────────
+
+[[rules]]
+id = "twitter-access-token"
+description = "Twitter Access Token"
+regex = '''[1-9][0-9]+-[0-9a-zA-Z]{40}'''
+tags = ["twitter", "token"]
+severity = "high"
+
+[[rules]]
+id = "facebook-access-token"
+description = "Facebook Access Token"
+regex = '''EAACEdEose0cBA[0-9A-Za-z]+'''
+tags = ["facebook", "token"]
+severity = "high"
+
+[[rules]]
+id = "google-api-key"
+description = "Google API Key"
+regex = '''AIza[0-9A-Za-z\-_]{35}'''
+tags = ["google", "api-key"]
+severity = "high"
+
+[[rules]]
+id = "google-oauth-id"
+description = "Google OAuth Client ID"
+regex = '''[0-9]+-[0-9A-Za-z_]{32}\.apps\.googleusercontent\.com'''
+tags = ["google", "oauth"]
+severity = "high"
+
+[[rules]]
+id = "picatic-api-key"
+description = "Picatic API Key"
+regex = '''sk_live_[0-9a-z]{32}'''
+tags = ["picatic", "api-key"]
+severity = "high"
+
+[[rules]]
+id = "stripe-restricted-key"
+description = "Stripe Restricted API Key"
+regex = '''rk_live_[0-9a-zA-Z]{24}'''
+tags = ["stripe", "api-key"]
+severity = "high"
+
+[[rules]]
+id = "square-access-token"
+description = "Square Access Token"
+regex = '''sq0atp-[0-9A-Za-z\-_]{10,}'''
+tags = ["square", "token"]
+severity = "high"
+min_length = 18
+
+[[rules]]
+id = "square-oauth-secret"
+description = "Square OAuth Secret"
+regex = '''sq0csp-[0-9A-Za-z\-_]{20,}'''
+tags = ["square", "oauth"]
+severity = "high"
+min_length = 27
+
+[[rules]]
+id = "paypal-braintree-token"
+description = "PayPal Braintree Access Token"
+# $ in TOML raw strings: use literal dollar sign
+regex = '''access_token[$]production[$][0-9a-zA-Z]{10,}[$][0-9a-fA-F]{16,}'''
+tags = ["paypal", "braintree", "token"]
+severity = "critical"
+min_length = 40
+
+[[rules]]
+id = "amazon-mws-auth-token"
+description = "Amazon MWS Auth Token"
+regex = '''amzn\.mws\.[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}'''
+tags = ["amazon", "mws", "token"]
+severity = "high"
+
+[[rules]]
+id = "twilio-api-key"
+description = "Twilio API Key"
+regex = '''SK[0-9a-fA-F]{32}'''
+tags = ["twilio", "api-key"]
+severity = "high"
+
+[[rules]]
+id = "mailgun-api-key"
+description = "MailGun API Key"
+regex = '''key-[0-9a-zA-Z]{32}'''
+tags = ["mailgun", "api-key"]
+severity = "high"
+
+[[rules]]
+id = "mailchimp-api-key"
+description = "MailChimp API Key"
+regex = '''[0-9a-f]{32}-us[0-9]{1,2}'''
+tags = ["mailchimp", "api-key"]
+severity = "high"
+
+# ── TABLE IV: Asymmetric Private Keys ────────────────────────
+
+[[rules]]
+id = "private-key-ec"
+description = "EC Private Key"
+regex = '''-----BEGIN EC PRIVATE KEY-----'''
+tags = ["private-key", "ec"]
+severity = "critical"
+
+[[rules]]
+id = "private-key-pgp"
+description = "PGP Private Key Block"
+regex = '''-----BEGIN PGP PRIVATE KEY BLOCK-----'''
+tags = ["private-key", "pgp"]
+severity = "critical"
+
+[[rules]]
+id = "private-key-generic"
+description = "Generic Private Key (PKCS#8)"
+regex = '''-----BEGIN PRIVATE KEY-----'''
+tags = ["private-key"]
+severity = "critical"
+
+# ── TABLE VI: Parallel / Context-Based Targets ───────────────
+
+[[rules]]
+id = "google-oauth-auth-code"
+description = "Google OAuth Authorization Code"
+regex = '''4/[0-9A-Za-z\-_]{20,}'''
+tags = ["google", "oauth"]
+severity = "medium"
+
+[[rules]]
+id = "google-oauth-refresh-token"
+description = "Google OAuth Refresh Token"
+regex = '''1/[0-9A-Za-z\-_]{43,64}'''
+tags = ["google", "oauth", "refresh-token"]
+severity = "high"
+
+[[rules]]
+id = "google-oauth-access-token"
+description = "Google OAuth Access Token"
+regex = '''ya29\.[0-9A-Za-z\-_]+'''
+tags = ["google", "oauth", "access-token"]
 severity = "high"
